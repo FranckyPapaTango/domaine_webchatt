@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="mgw.chat_domaine_webchatt_jar_1.0-SNAPSHOTPU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>mgw.domaine_webchatt.entities.Chatteur</class>
+    <class>mgw.domaine_webchatt.entities.Message</class>
+ <!--     <class>mgw.domaine_webchatt.entities.Envoyer</class>  -->
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3308/webchatt_db?zeroDateTimeBehavior=convertToNull&amp;serverTimezone=UTC;"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="root1A@"/>
+      
+    </properties>
+  </persistence-unit>
+</persistence>
