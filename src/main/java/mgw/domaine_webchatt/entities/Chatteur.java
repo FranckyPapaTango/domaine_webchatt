@@ -45,7 +45,7 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Chatteur.findByUsername", query = "SELECT c FROM Chatteur c WHERE c.username = :username")})
 @NamedNativeQueries({
     @NamedNativeQuery(name = "Chatteur.findChatteurByKeyWord",
-            query = "SELECT * FROM chatteur WHERE USERNAME like CONCAT('%', :search, '%') OR chatteur_id like CONCAT('%', :search, '%')",
+            query = "SELECT * FROM chatteur WHERE USERNAME like CONCAT('%', cast(:search as text), '%') OR chatteur_id like CONCAT('%', cast(:search as integer), '%')",
             resultClass = Chatteur.class)
 //,
 //    @NamedNativeQuery(name = "Chatteur.findChatteurByLoginAndPassword",
